@@ -7,6 +7,7 @@ Our project explores the personal histories of American astronauts to see if fac
 We worked with three datasets, all related by dates:
 
 1. **Astronaut biographical and occupational data** (astronauts.csv): This table contains biographical data about all NASA astronauts. Of particular interest to our analysis will be the astronauts' birthdates. The immediate issues we noticed were the birth date and the column names. https://www.kaggle.com/nasa/astronaut-yearbook  
+![astro1.png](images/astro1.png)
 ![astro1.png](attachment:astro1.png)
 ![astro2.png](attachment:astro2.png)
 3. **National distribution of birthdays** (birth_rates.csv): This pair of tables contains U.S. birthrate information by date, 1994-2003 from the CDC & NCHS and 2000-2014 from the SSA. We used the CDC table for 2000-2003. We noticed the text headers within the document that would need to be excluded during the import into MySQL. https://github.com/fivethirtyeight/data/tree/master/births  
