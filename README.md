@@ -2,5 +2,6 @@
 Dataset: https://www.kaggle.com/nasa/astronaut-yearbook
 
 - [x] upload ipynb
-- [ ] change image paths
-- [ ] upload images
+- [x] change image paths
+- [x] upload images
+- [ ] figure out why images won't load
