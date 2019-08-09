@@ -8,20 +8,19 @@ We worked with three datasets, all related by dates:
 
 1. **Astronaut biographical and occupational data** (astronauts.csv): This table contains biographical data about all NASA astronauts. Of particular interest to our analysis will be the astronauts' birthdates. The immediate issues we noticed were the birth date and the column names. https://www.kaggle.com/nasa/astronaut-yearbook  
 ![astro1.png](images/astro1.png)
-![astro1.png](attachment:astro1.png)
-![astro2.png](attachment:astro2.png)
+![astro2.png](images/astro2.png)
 3. **National distribution of birthdays** (birth_rates.csv): This pair of tables contains U.S. birthrate information by date, 1994-2003 from the CDC & NCHS and 2000-2014 from the SSA. We used the CDC table for 2000-2003. We noticed the text headers within the document that would need to be excluded during the import into MySQL. https://github.com/fivethirtyeight/data/tree/master/births  
-![astro3.png](attachment:astro3.png)
-![astro4.png](attachment:astro4.png)
+![astro3.png](images/astro3.png)
+![astro4.png](images/astro4.png)
 4. **Astrological signs** (zodiacs.csv): This table includes the date ranges for the Tropical Zodiac, used in the U.S. We looked for other table options since this came to us as HTML, but could not locate a clearer option. Importing to Excel and saving as a CSV did not yeild usable results, perhaps due to the inclusion of images. We chose instead to write the CSV from scratch to practice writing CSVs from dicts. With this data set, we also identified the date formatting as an issue to address during MySQL import. https://en.wikipedia.org/wiki/Zodiac   
-![astro5.png](attachment:astro5.png)
+![astro5.png](images/astro5.png)
 
 # WORKFLOW
 ## Database schema 
 After creating the database design, we could see that we would be relating our datasets and the two tables through date. However, the raw data we worked with came with a variety of date formats. Most notably, our zodiac data did not have years, since the ranges repeat every year. We continued to design the database knowing that we would eventually make the dates compatable as we imported the data into MySQL.
-![astro6.png](attachment:astro6.png)
+![astro6.png](images/astro6.png)
   
-![astro7.png](attachment:astro7.png)  
+![astro7.png](images/astro7.png)  
   
 ## CSV files
 
@@ -96,8 +95,8 @@ Once our tables were adjusted, we imported our CSV data into the MySQL tables: a
 ![astro8.png](attachment:astro8.png)
   
 2. set the table structures based on the columns and data in our CSV files:  
-***astronauts table*** ![astro9.png](attachment:astro9.png)  
-***dates table*** ![astro10.png](attachment:astro10.png)
+***astronauts table*** ![astro9.png](images/astro9.png)  
+***dates table*** ![astro10.png](images/astro10.png)
   
 ## CSV data import via Python  
   
@@ -585,7 +584,7 @@ print("csv written")
     csv written
 
 
-![astro11.png](attachment:astro11.png)
+![astro11.png](images/astro11.png)
 
 If births have a uniform distribution across days of the week, we expect the percents to be about 14.2857%. Instead, we found that the U.S. population varied between weekdays and weekends, where (except for Monday) weekday births were around 16% of the population and weekend births were closer to 10%. There is a 6.65% range between the highest, Tuesday, and lowest, Sunday.  
   
@@ -892,7 +891,7 @@ print("csv written")
     csv written
 
 
-![astro12.png](attachment:astro12.png)
+![astro12.png](images/astro12.png)
 
 Again we expected a uniform distribution at 8.333...% among the zodiac signs. The largest share of U.s. birthdays belonged to Virgo (at 9.24%), at least between 1994 and 2014. The lowest belonged to Capricorn (at 7.76%). The rest stuck pretty close to the expected uniform distribution, with a range of 1.48%.  
   
